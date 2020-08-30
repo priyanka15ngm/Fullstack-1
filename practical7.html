@@ -1,62 +1,67 @@
-  
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <title>Practical-7</title>
     <style>
-       
-        #container
-        {
+        #container {
             border: 10px solid lightgrey;
-            width: 1200px;
-            padding:15px;
-           
+
+            padding: 15px;
+
         }
-        #container::after
-        {
+
+        #container::after {
             clear: both;
         }
-        #header
-        {
+
+        #header {
             background-color: brown;
-            color:white; 
+            color: white;
             width: 100%;
-            height:50px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom:10px ;
+            margin-bottom: 10px;
             font-size: 35px;
         }
-        #banner
-        {
-             color:white; 
+
+        #banner {
+            color: white;
             width: 100%;
             height: 100vh;
-            background-color:slateblue;
+            background-color: slateblue;
             color: white;
             font-size: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        h3
-        {
+
+        h3 {
             text-align: center;
             font-weight: bold;
 
         }
-        #section1
-        {
+
+        #section1 {
             height: 370px;
             padding: 20px;
-           
+
             margin-bottom: 10px;
         }
-        #circle
-        {
+
+        #circle {
             border-radius: 50%;
             background-color: red;
             width: 235px;
@@ -64,15 +69,15 @@
             float: left;
             margin: 25px;
         }
-        #section2
-        {
+
+        #section2 {
             width: 100%;
             height: 350px;
             margin-bottom: 10px;
-            
+
         }
-        #left
-        {
+
+        #left {
             width: 50%;
             height: 270px;
             background-color: orange;
@@ -80,12 +85,15 @@
             justify-content: center;
             align-items: center;
             float: left;
-        
+
             font-size: 40px;
-             color:white; 
+            color: white;
         }
-        #art1,#art2,#art3,#art4
-        {
+
+        #art1,
+        #art2,
+        #art3,
+        #art4 {
             float: right;
             width: 48%;
             height: 60px;
@@ -95,37 +103,36 @@
             background-color: greenyellow;
             font-size: 25px;
             margin-bottom: 10px;
-             color:white; 
+            color: white;
         }
-        #section3
-        {
+
+        #section3 {
             width: 100%;
             height: 350px;
             margin-bottom: 10px;
         }
-        .rect
-        {
-           
-            margin: 20px ;
+
+        .rect {
+
+            margin: 20px;
             padding: 10px;
-           
+
             float: left;
             width: 20%;
-            height:230px;
+            height: 230px;
             display: block;
-            background-color:darkgreen;
-            color:black;
+            background-color: darkgreen;
+            color: black;
         }
-        
-        
-        #section4
-        {
+
+
+        #section4 {
             width: 100%;
             height: 100px;
         }
-        #footer
-        {
-             color:white; 
+
+        #footer {
+            color: white;
             width: 100%;
             height: 45px;
             background-color: lightslategrey;
@@ -136,6 +143,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="container">
         <div id="header">
@@ -145,11 +153,11 @@
             Banner
         </div>
         <div id="section1">
-        <h3>Section-1</h3>
-        <div id="circle"></div>
-        <div id="circle"></div>
-        <div id="circle"></div>
-        <div id="circle"></div>
+            <h3>Section-1</h3>
+            <div id="circle"></div>
+            <div id="circle"></div>
+            <div id="circle"></div>
+            <div id="circle"></div>
         </div>
         <div id="section2">
             <h3>Section-2</h3>
@@ -160,7 +168,7 @@
                 <div id="art1">Article - 1</div>
                 <div id="art2">Article - 2</div>
                 <div id="art3">Article - 3</div>
-                 <div id="art4">Article - 4</div>
+                <div id="art4">Article - 4</div>
             </div>
         </div>
         <div id="section3">
@@ -176,4 +184,5 @@
         </div>
     </div>
 </body>
+
 </html>
