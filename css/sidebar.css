@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+
+}
+
+.header img {
+    width: 70px;
+    height: 70px;
+}
+
+.header h1 {
+    line-height: 70px;
+    color: white;
+
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 70px;
+    background-color: #3d6867;
+    left: -100%;
+    transition: 0.7s;
+
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    transition: 0.4s;
+}
+
+.sidebar ul li a:hover {
+    border-left: 10px solid white;
+}
+
+a i {
+    margin-left: 25px;
+
+}
+
+.social {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+}
+
+i {
+    font-size: 30px;
+    color: white;
+}
+
+.show-btn,
+.hide-btn {
+    font-size: 35px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+
+}
+
+.hide-btn {
+    opacity: 0;
+}
+
+#chk:checked~.sidebar {
+    left: 0;
+}
+
+#chk:checked~.show-btn {
+    opacity: 0;
+}
+
+#chk:checked~.hide-btn {
+    opacity: 1;
+}
+
+#chk:checked~.content {
+    width: 80%;
+    float: right;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+.content {
+    width: 100%;
+    margin-top: 70px;
+
+    float: right;
+    transition: .7s;
+}
+
+
+.content img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.content p {
+    text-align: justify;
+
+}
+
+
+
+@media(max-width:768px) {
+    .sidebar {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .header h1 {
+        display: none;
+    }
+
+}
