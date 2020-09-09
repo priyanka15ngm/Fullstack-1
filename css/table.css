@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table,
+th,
+td,
+tr {
+    border: 5px solid rgba(0, 0, 0, 0.945);
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    padding: 8px;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.head {
+    border: 5px solid black;
+    border-bottom: 0px;
+    background-color: rgb(179, 169, 61);
+    font-size: 50px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: white;
+}
+
+td a:nth-child(odd) {
+    text-decoration: none;
+}
+
+.footer {
+    caption-side: bottom;
+    border: 5px solid black;
+    border-top: 0px;
+    background-color: rgb(179, 169, 61);
+    font-size: 35px;
+    border-radius: 0;
+    color: red;
+    margin-bottom: 30px;
+    padding: 15px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+tr:nth-child(even) {
+    background-color: burlywood;
+    font-size: 20px;
+    color: rgb(78, 67, 32);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(164, 184, 184);
+    color: white;
+    font-size: 20px;
+}
+
+th {
+    background-color: palegoldenrod;
+    color: tomato;
+}
+
+tbody>tr>:nth-child(4) {
+    color: green;
+}
+
+tr:hover {
+    background-color: rgb(44, 133, 133);
+    transition: .5s;
+}
+
+.head:hover,
+.footer:hover {
+    background-color: rgb(164, 184, 184);
+    color: white;
+    transition: .8s;
+    font-weight: bold;
+}
+
+tr>i {
+    padding: 30px;
+    margin: 30px;
+}
