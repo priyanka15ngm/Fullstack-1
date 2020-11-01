@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=css/practical15.css />
+    <title>practical1-15</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+
+    <div class="myflex">
+        <button id="decCount" onclick="fun1()">-</button>&nbsp;
+        &nbsp;&nbsp;&nbsp;<div id="counter">0</div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="incCount" onclick="fun2()">+</button>
+
+
+    </div>
+
+    <script>
+        var number = parseInt(document.getElementById("counter").innerHTML)
+        var btn1 = document.getElementById("decCount");
+        btn1.disabled = true;
+
+        function fun1() {
+            number = number - 1;
+            document.getElementById("counter").innerHTML = number
+            if (number == 0) {
+                btn1.disabled = true;
+            }
+        }
+
+        function fun2() {
+            number = number + 1;
+            document.getElementById("counter").innerHTML = number
+            btn1.disabled = false
+        }
+
+    </script>
+
+
+</body>
+
+</html>
