@@ -1,0 +1,25 @@
+body {
+    background-color: teal;
+}
+
+#decCount {
+    background-color: tomato;
+}
+
+#incCount {
+    background-color: tomato;
+}
+
+#counter {
+    font-size: larger;
+}
+
+.myflex {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    text-align: center;
+}
