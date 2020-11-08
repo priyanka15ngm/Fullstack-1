@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/practical16.css ">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> ToDo-List</h1>
+
+    <form>
+        <input type="text" class="todo-input" />
+        <button class="todo-button"><i class="fa fa-plus-square"></i> </button>
+    </form>
+
+
+    <div class="todo-container">
+
+        <ul class="todo-list">
+
+        </ul>
+
+
+    </div>
+
+    <script>
+
+
+        //Selectors
+        var todoInput = document.querySelector(".todo-input");
+        var todoButton = document.querySelector(".todo-button");
+        var todoList = document.querySelector(".todo-list");
+
+
+        // Event listner
+
+
+
+        todoButton.onclick = create;
+        // list.onclick = chkdel;
+
+        todoList.onclick = checkdelete;
+
+
+
+
+
+
+        function create(e) {
+
+            //used to prevent form sending data to server 
+            e.preventDefault();
+
+
+            var newDiv = document.createElement("div"); //creating new div
+            newDiv.classList.add("todo"); //adding class to our new div
+
+
+            var newLi = document.createElement("li");
+            newLi.classList.add("todo-item");
+            newLi.innerHTML = todoInput.value;
+            newDiv.appendChild(newLi)
+
+            //creating check button
+            var checkbtn = document.createElement("button");
+            checkbtn.classList.add("check-btn");
+            checkbtn.innerHTML = '<i class = "fa fa-check"></i>';
+            newDiv.appendChild(checkbtn); //adding checkbtn to our new div
+
+
+            //creating delete button
+            var deletebtn = document.createElement("button");
+            deletebtn.classList.add("delete-btn");
+            deletebtn.innerHTML = '<i class = "fa fa-trash"></i>';
+            newDiv.appendChild(deletebtn); //adding checkbtn to our new div
+
+
+
+
+
+            //adding (newDiv with v=both check and delete ) to the todo-list div (<div class="todo-list"></div>)of html
+            todoList.appendChild(newDiv);
+            todoInput.value = "";
+
+
+
+
+
+
+        }
+        function checkdelete(e) {
+
+            const item = e.target;
+            if (item.classList[0] === "delete-btn") {
+                var parent = item.parentNode;
+                parent.remove()
+
+            }
+
+            if (item.classList[0] === "check-btn") {
+                var parent = item.parentNode;
+                parent.classList.toggle("completed");
+
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
