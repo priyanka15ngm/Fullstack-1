@@ -29,6 +29,8 @@ function showtime() {
     min
   )}<span>:<span/>${addZero(sec)}${amPm}`;
 
+  date.innerHTML = `${todaydate}`;
+
   setTimeout(showtime, 1000);
 }
 
@@ -52,6 +54,7 @@ function setGreeting() {
     document.body.style.color = "white";
   }
 }
+
 //Function call
 
 function getName() {
@@ -73,6 +76,7 @@ function setName(e) {
     // e.target means name and the be store the innerhtml of name into mydata database which get store into localstorage
   }
 }
+
 getName();
 showtime();
 setGreeting();
